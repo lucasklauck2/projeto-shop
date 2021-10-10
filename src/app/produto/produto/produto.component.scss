@@ -1,0 +1,9 @@
+.container {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  app-produto-exibicao {
+    margin: 15px;
+  }
+}

@@ -1,7 +1,3 @@
 <div class="container">
-  <app-produto-exibicao></app-produto-exibicao>
-  <app-produto-exibicao></app-produto-exibicao>
-  <app-produto-exibicao></app-produto-exibicao>
-  <app-produto-exibicao></app-produto-exibicao>
-  <app-produto-exibicao></app-produto-exibicao>
+  <app-produto-exibicao *ngFor="let produto of listaProduto" [produto]="produto"></app-produto-exibicao>
 </div>

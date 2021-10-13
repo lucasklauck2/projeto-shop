@@ -1,39 +1,68 @@
-        <mat-toolbar color="primary">
-          <button mat-icon-button class="botao-menu" (click)="menu.toggle()">
-            <mat-icon>menu</mat-icon>
-          </button>
-          <span>E-commerce</span>
-        </mat-toolbar>
+<mat-toolbar color="primary">
+  <button mat-icon-button class="botao-menu" (click)="menu.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>E-commerce</span>
+</mat-toolbar>
 
-        <mat-sidenav-container>
-          <mat-sidenav #menu [mode]="!mobile ? 'side' : 'over'" [opened]="!mobile" class="mat-elevation-z8">
-            <div class="menu">
+<mat-sidenav-container>
+  <mat-sidenav #menu [mode]="!mobile ? 'side' : 'over'" [opened]="!mobile" class="mat-elevation-z8">
+    <div class="menu">
 
-              <button mat-raised-button class="menu-button" matRipple>
-                <mat-icon>storefront
-                </mat-icon>
-                <span>Comprar</span>
-              </button>
+      <button mat-raised-button class="menu-button" matRipple>
+        <mat-icon>storefront
+        </mat-icon>
+        <span>Comprar</span>
+      </button>
 
-              <mat-divider></mat-divider>
+      <mat-divider></mat-divider>
 
-              <button mat-raised-button class="menu-button" matRipple>
-                <mat-icon>add_box
-                </mat-icon>
-                <span>Criar anúncio</span>
-              </button>
+      <button mat-raised-button class="menu-button" matRipple>
+        <mat-icon>add_box
+        </mat-icon>
+        <span>Criar anúncio</span>
+      </button>
 
-              <mat-divider></mat-divider>
+      <mat-divider></mat-divider>
 
-              <button mat-button class="menu-button" matRipple>
-                <mat-icon>edit</mat-icon>
-                <span>Gerenciar anúncios</span>
-              </button>
+      <button mat-button class="menu-button" matRipple>
+        <mat-icon>edit</mat-icon>
+        <span>Meus anúncios</span>
+      </button>
 
-              <mat-divider></mat-divider>
-            </div>
-          </mat-sidenav>
-          <mat-sidenav-content>
-            <router-outlet></router-outlet>
-          </mat-sidenav-content>
-        </mat-sidenav-container>
+      <mat-divider></mat-divider>
+
+      <button mat-button class="menu-button" matRipple>
+        <mat-icon>edit</mat-icon>
+        <span>Minhas compras</span>
+      </button>
+
+      <mat-divider></mat-divider>
+
+      <button mat-button class="menu-button" matRipple>
+        <mat-icon>edit</mat-icon>
+        <span>Minhas vendas</span>
+      </button>
+
+      <mat-divider></mat-divider>
+
+      <p-divider align="center" class="col-12" [styleClass]="'divi'">
+
+        <i class="pi pi-user"></i>
+
+      </p-divider>
+
+      <mat-divider></mat-divider>
+
+      <button mat-button class="menu-button" matRipple>
+        <mat-icon>edit</mat-icon>
+        <span>Detalhes da conta</span>
+      </button>
+
+      <mat-divider></mat-divider>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content class="bg-gray-100">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

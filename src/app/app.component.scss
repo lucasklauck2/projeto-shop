@@ -7,10 +7,6 @@ mat-sidenav {
   min-width: 200px;
 }
 
-mat-sidenav-content {
-  width: 80vw;
-}
-
 mat-sidenav-container {
   height: 93vh;
 }
@@ -45,6 +41,10 @@ mat-sidenav-container {
 }
 
 .menu :hover {
-  background-color: lightgray;
+  background-color: #ebebeb;
   cursor: pointer;
+}
+
+:host ::ng-deep .divi.p-divider {
+  margin: 0 !important;
 }

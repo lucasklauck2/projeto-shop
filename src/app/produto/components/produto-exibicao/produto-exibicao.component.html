@@ -1,7 +1,31 @@
-<div class="container">
-  <img src="http://images.tcdn.com.br/img/img_prod/651986/blusa_branca_masculina_12_1_20180827001130.jpg">
+<div class="container grid">
 
-  <p class="titulo">Camiseta básica - branca</p>
-  <mat-divider></mat-divider>
-  <button mat-raised-button color="primary">Comprar</button>
+  <img width="284" height="284" src="{{produto.urlImagem}}">
+
+  <p class="titulo">{{produto.titulo}}</p>
+
+  <p-divider align="center" class="col-12" [styleClass]="'divi'">
+
+    <i class="pi pi-shopping-cart"></i>
+
+  </p-divider>
+
+  <div class="col-12 flex">
+
+    <div class="valor col flex align-content-center flex-wrap justify-content-center">
+      <h1 class="m-0">R$ {{produto.valor | number : '1.2-2'}}</h1>
+    </div>
+
+    <div class="quantidade col flex align-items-center justify-content-center">
+      <p-inputNumber decrementButtonClass="p-button-success" incrementButtonClass="p-button-success" [size]="1"
+        [(ngModel)]="valorInicial" mode="decimal" [showButtons]="true" inputId="minmax-buttons" [min]="1" [max]="100">
+      </p-inputNumber>
+    </div>
+
+  </div>
+
+  <button pButton pRipple type="button" label="Comprar" icon="pi pi-shopping-cart"
+    class="p-button-success col-8"></button>
+  <button pButton pRipple type="button" label="Info" icon="pi pi-info-circle"
+    class="p-button-secondary col-3 ml-2"></button>
 </div>

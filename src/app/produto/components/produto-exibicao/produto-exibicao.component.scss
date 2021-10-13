@@ -2,10 +2,11 @@
   border-style: solid;
   border-radius: 5px;
   border-color: grey;
+  border-width: 2px;
   width: 300px;
-  height: 400px;
-  background-color: lightgray;
-  display: grid;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   padding: 10px;
@@ -21,5 +22,9 @@
 
   mat-divider {
     margin-bottom: 15px;
+  }
+
+  :host ::ng-deep .divi.p-divider {
+    margin: 0 !important;
   }
 }

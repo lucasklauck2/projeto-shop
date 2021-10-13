@@ -1,3 +1,4 @@
+import { DividerModule } from 'primeng/divider';
 import { NgModule } from '@angular/core';
 import { MatRippleModule } from '@angular/material/core';
 import { MatDividerModule } from '@angular/material/divider';
@@ -20,6 +21,7 @@ import { AppComponent } from './app.component';
     MatIconModule,
     MatRippleModule,
     MatDividerModule,
+    DividerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
